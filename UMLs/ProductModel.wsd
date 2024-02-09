@@ -1,0 +1,9 @@
+@startuml program
+title ProductModel
+class Product{
+    +name
+    +price
+    +quantity
+    +Product(name,price,quantity)
+}
+@enduml
