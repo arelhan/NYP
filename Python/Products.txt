@@ -1,0 +1,5 @@
+Macbook,20000,3
+ipod,500,20
+Laptop,2500,2
+Telefon,1500,5
+Klavye,100,10
