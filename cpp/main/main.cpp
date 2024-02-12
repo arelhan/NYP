@@ -61,7 +61,7 @@ class Car : Vehicle{
         void openSunroof(){
         std::cout<<"sunroof is opening. "<< std::endl;
         }
-}
+};
 int main(){
     Vehicle item1 = Vehicle();
     item1.setManifacturer("volvo");//set yazılması
