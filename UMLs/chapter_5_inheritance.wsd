@@ -4,6 +4,7 @@ title Vehicle
 class Vehicle{
     #manifacturer : String
     #year : int
+    #tireHealt
     #color : String
     +start()
     +stop()
