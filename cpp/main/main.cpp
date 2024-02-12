@@ -40,7 +40,28 @@ public:
         this->color=color;
 
     }
+
+    void start(){
+        std::cout<<"Vehicle has been started."<< std::endl;
+    }
+
+    void stop(){
+        std::cout<<"Vehicle has been stopped."<< std::endl;
+
+    }
+
+    void drive(){
+        std::cout<<"Vehicle has been driving..."<< std::endl;
+
+    }
 };
+
+class Car : Vehicle{
+    public:
+        void openSunroof(){
+        std::cout<<"sunroof is opening. "<< std::endl;
+        }
+}
 int main(){
     Vehicle item1 = Vehicle();
     item1.setManifacturer("volvo");//set yazılması
