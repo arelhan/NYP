@@ -1,18 +1,18 @@
 #include <iostream>
 using std::string;
 class Vehicle{
-private:
-    string manifacturer;
+protected:
+    string manufacturer;
     int year;
     string color;
 public:
-    string getmanifacturer(){
-        return manifacturer;
+    string getmanufacturer(){
+        return manufacturer;
     }
 
-    void setManifacturer(string value){
+    void setManufacturer(string value){
 
-        this-> manifacturer=value;
+        this-> manufacturer=value;
 
     }
     int getYear(){
@@ -34,8 +34,9 @@ public:
     Vehicle(){
         std::cout<<"\nAn instance has been derived from Vehicle.";    
     }
-    Vehicle(string manifacturer, int year, string color) : Vehicle(){
-        this->manifacturer = manifacturer;
+    Vehicle(string manufacturer, int year, string color) 
+     : Vehicle(){
+        this->manufacturer = manufacturer;
         this->year=year;
         this->color=color;
 
@@ -58,16 +59,29 @@ public:
 
 class Car : public Vehicle{
     public:
+
+        Car(){
+            std::cout<<"\nAn instance has been derived from Car."<< std::endl;
+        }
+        Car(string manufacturer,int year,string color )
+            : Vehicle( manufacturer, year, color)
+        {
+            std::cout<<"\nAn instance with full parameters has been derived from Car."<< std::endl;
+        }
         void openSunroof(){
         std::cout<<"sunroof is opening. "<< std::endl;
         }
 };
 int main(){
     Car item1 = Car();
-    item1.setManifacturer("volvo");//set yazılması
-    std::cout<<"Vehicle : " << item1.getmanifacturer() << std::endl;
+    item1.setManufacturer("volvo");//set yazılması
+    std::cout<<"Vehicle : " << item1.getmanufacturer() << std::endl;
 
     Vehicle item2 =Vehicle("Scode",2019,"White");
-    std::cout<<"Vehicle " << item2.getmanifacturer()<< std::endl;
+    std::cout<<"Vehicle " << item2.getmanufacturer()<< std::endl;
+
+    Car item3 = Car("Mercedes",2020,"ice blue");
+    std::cout<<"Vehicle : " << item3.getmanufacturer() << std::endl;
+
     return 0;
 }
