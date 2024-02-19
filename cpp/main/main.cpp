@@ -56,14 +56,14 @@ public:
     }
 };
 
-class Car : Vehicle{
+class Car : public Vehicle{
     public:
         void openSunroof(){
         std::cout<<"sunroof is opening. "<< std::endl;
         }
 };
 int main(){
-    Vehicle item1 = Vehicle();
+    Car item1 = Car();
     item1.setManifacturer("volvo");//set yazılması
     std::cout<<"Vehicle : " << item1.getmanifacturer() << std::endl;
 
